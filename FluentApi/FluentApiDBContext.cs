@@ -58,6 +58,7 @@ namespace FluentApi
             if (Get(intProperty) is X1Model x1ModelNotNull)
             {
                 x1ModelNotNull.StringProperty = stringProperty;
+                x1ModelNotNull.UpdateDate = DateTime.Now;
                 X1Models.Update(x1ModelNotNull);
                 SaveChanges();
             }
